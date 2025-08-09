@@ -1,34 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Header from './components/Header'
+import Sidebar from './components/Sidebar'
+import TaskForm from './components/TaskForm'
+import Todo from './components/Todo'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div class="container-fluid">
+      <div class="row min-vh-100">
+        <Sidebar />
+        <main class="col-10 p-4">
+          <Header />
+          <TaskForm />
+          <div class="border rounded p-3 mb-3 row">
+            <h5 class="col align-middle">Todos</h5>
+            <div class="btn-group col ms-auto align-middle">
+              <button class="btn btn-outline-secondary"><i class="bi bi-archive"></i></button>
+              <button class="btn btn-outline-secondary"><i class="bi bi-filter"></i></button>
+            </div>
+          </div>
+          <Todo />
+        </main>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
