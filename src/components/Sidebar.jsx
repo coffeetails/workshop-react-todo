@@ -9,13 +9,13 @@ function Sidebar() {
         <li className="nav-item">
           <a href="#" className="nav-link border-bottom border-3 pb-0 mt-1 fw-bold text-white"><i className="bi bi-house"></i> Dashboard</a>
         </li>
-        <li class="nav-item">
+        <li className="nav-item">
           <a href="#" className="nav-link border-bottom pb-0 mt-1 fw-bold text-white"><i className="bi bi-people"></i> Users</a>
         </li>
-        <li class="nav-item">
+        <li className="nav-item">
           <a href="#" className="nav-link border-bottom pb-0 mt-1 fw-bold text-white active"><i className="bi bi-list-task"></i> Tasks</a>
         </li>
-        <li class="nav-item">
+        <li className="nav-item">
           <a href="#" className="nav-link border-bottom pb-0 mt-1 fw-bold text-white"><i className="bi bi-gear"></i> Settings</a>
         </li>
       </ul>
